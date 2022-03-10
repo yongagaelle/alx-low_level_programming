@@ -6,3 +6,4 @@
 5-Hello,printf
 6- size is not grandeur, and territory
 7-intel
+8- UNIX is basically a simple operating system
