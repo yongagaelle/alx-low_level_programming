@@ -1,7 +1,8 @@
 #include <stdio.h>
-/* main - puts Programming is like building a multilingual puzzle
+/* 
+ * main - puts Programming is like building a multilingual puzzle
  *
- * Return 0
+ * Return:  always 0(success)
  */
 int main(void)
 {
