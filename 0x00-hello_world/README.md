@@ -5,3 +5,4 @@
 4-Hello, puts
 5-Hello,printf
 6- size is not grandeur, and territory
+7-intel
