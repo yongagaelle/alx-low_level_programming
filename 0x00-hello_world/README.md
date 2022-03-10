@@ -4,3 +4,4 @@
 3-name
 4-Hello, puts
 5-Hello,printf
+6- size is not grandeur, and territory
