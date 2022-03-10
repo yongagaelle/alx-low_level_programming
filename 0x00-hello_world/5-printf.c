@@ -2,7 +2,7 @@
 /**
  * main - prints with proper grammar, but the outcome
  * Description: this script prints string with printf
- * Reurn : 0.
+ * Return : 0.
  */
 int main(void)
 {
