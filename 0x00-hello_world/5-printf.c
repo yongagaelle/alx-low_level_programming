@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main - prints with proper grammar, but the outcome
- * Description: this script prints string with printf
- * Return : 0.
+ * description: this script prints string with printf
+ * Return: Always 0 (success).
  */
 int main(void)
 {
