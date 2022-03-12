@@ -9,3 +9,4 @@
 8-Hexadecimal
 9-Patience, persistence and perspiration make  an unsbeatable
 10-inventing is a combinaison of brains and materials
+11- The success combinaison in business
