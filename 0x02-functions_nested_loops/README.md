@@ -4,3 +4,4 @@
 3- islower
 4- isalpha
 5- sign
+6- There is no such thing as absolute value in this world
