@@ -13,3 +13,4 @@
 12- The world looks like a multiplication-table
 13- Nature made the natural numbers; All else is the work of women
 14- In computer class, the first assignment was to write a program to print the first 100 fibonacci
+15- Even Liber Abbaci
