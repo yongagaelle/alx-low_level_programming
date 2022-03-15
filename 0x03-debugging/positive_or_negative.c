@@ -5,7 +5,6 @@
 
 /**
  * positive_or_negative - prints number
- *
  */
 void positive_or_negative(int n)
 {
