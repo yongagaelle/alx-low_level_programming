@@ -8,3 +8,4 @@
 7- There are only 3 colors, 10 digits, and 7 notes
 8- i'm federal agent jack bauer, and today is the longest day of my life
 9- learn your times table
+10- a+b
