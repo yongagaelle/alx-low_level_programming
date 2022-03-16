@@ -1,10 +1,12 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
  * positive_or_negative - prints number
  * @i: The number to print
  */
+
 void positive_or_negative(int i)
 {
 
