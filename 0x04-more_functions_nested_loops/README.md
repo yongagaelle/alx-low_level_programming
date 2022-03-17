@@ -10,3 +10,4 @@
 9-fizz buzz
 10-print triangle
 11- prime factor
+12- Numbers have life
