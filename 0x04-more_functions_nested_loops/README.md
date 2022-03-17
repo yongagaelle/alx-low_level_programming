@@ -6,3 +6,4 @@
 5.more numbers
 6- print line
 7-print diagonal
+8-print square
