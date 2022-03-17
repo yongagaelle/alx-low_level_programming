@@ -7,7 +7,7 @@
  */
 void more_numbers(void)
 {
-	int nu;
+	int nu = 0;
 	int n;
 
 	for (n = 0; n < 10; n++)
@@ -15,9 +15,10 @@ void more_numbers(void)
 		for (nu = 0; nu <= 14; nu++)
 		{
 			if (nu >= 10)
+			{
 				_putchar(nu / 10 + '0');
-
-			_putchar(nu % 10 + '0');
+			}
+			 _putchar(nu % 10 + '0');
 		}
 
 		_putchar('\n');
