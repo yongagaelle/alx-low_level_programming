@@ -9,3 +9,4 @@
 8-print square
 9-fizz buzz
 10-print triangle
+11- prime factor
