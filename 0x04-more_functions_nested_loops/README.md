@@ -3,3 +3,4 @@
 2.mul
 3.print numbers
 4.print most numbers
+5.more numbers
