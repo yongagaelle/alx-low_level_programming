@@ -20,5 +20,5 @@ int main(void)
 			printf("%d", n);
 	}
 	printf("\n");
-	ŕeturn (0);
+	return (0);
 }
