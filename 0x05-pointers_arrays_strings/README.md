@@ -4,3 +4,4 @@
 3- i do not fear computer. I fear the lack of them
 4- i can only go one way. i've not got a reverse gear
 5- reverses a string
+6- half the lies they tell about me aren't true
