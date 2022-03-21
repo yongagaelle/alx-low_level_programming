@@ -12,7 +12,7 @@ int main(void)
 	int i;
 
 	srand(time(NULL));
-	for (i = 0; i <= 38; i++)
+	for (i = 0; i <= 37; i++)
 		putchar(rand() % (122 - 33) + 33);
 
 	return (0);
