@@ -6,3 +6,4 @@
 5- reverses a string
 6- half the lies they tell about me aren't true
 7- winning is only half of it. having fun is the other half
+8- Arrays are not pointers
