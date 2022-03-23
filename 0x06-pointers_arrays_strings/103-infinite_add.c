@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * infinite_add - hat adds two numbers.
+ * infinite_add - that adds two numbers.
  * @n1: pointer to array of chars.
  * @n2: pointer to array of chars.
  * @r: pointewr to buffer
@@ -10,7 +10,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int l1, l2, i, num1, num2, sumaUnitaria = 0;
+	int l1, l2, i, num1, num2, sum = 0;
 
 	for (l1 = 0; n1[l1]; l1++)
 	{}
@@ -24,6 +24,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	if (l1 > i || l2 > i)
 		return (0);
+
 	while (l1 >= 0 || l2 >= 0)
 	{
 		num1 = 0;
@@ -33,19 +34,19 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (l2 >= 0)
 			num2 = n2[l2] - '0';
 
-		sumaUnitaria += num1 + num2;
-		r[i] = (sumaUnitaria % 10) + '0';
-		sumaUnitaria /= 10;
+		sum += num1 + num2;
+		r[i] = (sum % 10) + '0';
+		sum /= 10;
 		i--;
 		l1--;
 		l2--;
 	}
-	if  (sumaUnitaria != 0)
+	if (sum != 0)
 	{
 		if (i < 0)
 			return (0);
 
-		r[i] = sumaUnitaria + '0';
+		r[i] = sum + '0';
 		return (r + i);
 	}
 	else
