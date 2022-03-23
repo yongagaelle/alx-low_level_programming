@@ -8,3 +8,4 @@
 7.Mozart composed his music not for the elite,but for everybody
 8.rot13
 9.Numbers have life
+10.A dream doesn't become reality through magic
