@@ -4,3 +4,4 @@
 3.strcmp
 4.I am a kind of paranoid in reverse,
 5.Always look up
+6.Expect the best.Prepare for the worst
