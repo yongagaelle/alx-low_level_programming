@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
  * infinite_add - hat adds two numbers.
  * @n1: pointer to array of chars.
