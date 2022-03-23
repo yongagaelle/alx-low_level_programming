@@ -23,5 +23,5 @@ char *rot13(char *str)
 			}
 		str++;
 	}
-	return (str);
+	return (strcopy);
 }
