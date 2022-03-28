@@ -10,11 +10,11 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
-	int index = 0;
+	int index;
 
 	while (*s)
 	{
-		for (; accept[index]; index++)
+		for (index = 0; accept[index]; index++)
 		{
 			if (*s == accept[index])
 			{
@@ -25,7 +25,6 @@ unsigned int _strspn(char *s, char *accept)
 			else if (accept[index + 1] == '\0')
 				return (count);
 		}
-		
 		s++;
 	}
 
