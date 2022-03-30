@@ -5,3 +5,4 @@
 4-Once an idea has take hold of the brain
 5- Your subconscious is looking for the dreamer
 6-Inception. is it possible?
+7- palindrome
