@@ -4,7 +4,8 @@
 /**
  * create_array - initializes it with a specific char
  * @size: number of arguments passed in call to program
- * @c: the specific char to initialize the array 
+ * @c: the specific char to initialize the array
+ *
  * Return: pointer to the array
  */
 char *create_array(unsigned int size, char c)
