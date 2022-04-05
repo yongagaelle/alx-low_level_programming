@@ -47,7 +47,7 @@ char **strtow(char *str)
 		{
 			if (str[c] == ' ')
 				k++;
-			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c +1] == '\0'))
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
 				tab[i] = malloc((c - k + 2) * sizeof(char));
 				if (tab[i] == NULL)
@@ -58,7 +58,7 @@ char **strtow(char *str)
 				break;
 			}
 		}
-		for (j = 0; k <= c; k++,j++)
+		for (j = 0; k <= c; k++, j++)
 			tab[i][j] = str[k];
 		tab[i][j] = '\0';
 	}
