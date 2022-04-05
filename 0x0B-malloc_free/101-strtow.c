@@ -32,7 +32,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (c = 0; str[c] != '\0'; c++)
 	{
-		if (str[c] != '' && (str[c + 1] == '' || str[c + 1] == '\0'))
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			height++;
 	}
 	tab = malloc((height + 1) * sizeof(char *));
@@ -45,9 +45,9 @@ char **strtow(char *str)
 	{
 		for (c = k; str[c] != '\0'; c++)
 		{
-			if (str[c] == '')
+			if (str[c] == ' ')
 				k++;
-			if (str[c] != '' && (str[c + 1] == '' || str[c +1] == '\0'))
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c +1] == '\0'))
 			{
 				tab[i] = malloc((c - k + 2) * sizeof(char));
 				if (tab[i] == NULL)
