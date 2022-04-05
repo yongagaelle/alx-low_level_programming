@@ -3,10 +3,10 @@
 
 /**
  * alloc_grid - returns a pointer to a 2 dimensional array of integers
- * @width: first dimension of the array
- * @height: second dimension of the array
+ *@width: first dimension of the array
+ *@height: second dimension of the array
  *
- * Return: a pointer to 2-dimensional array of integers
+ * Return: pointer to the 2-dimensional array
  */
 int **alloc_grid(int width, int height)
 {
@@ -26,15 +26,14 @@ int **alloc_grid(int width, int height)
 		if (tab[i] == NULL)
 		{
 			while (i--)
-			       free(tab[i]);
+				free(tab[i]);
 
-		        free(tab);
-		        return (NULL);
+			free(tab);
+			return (NULL);
 		}
-	        
-	        for (j = 0; j < width; j++)
-	                    tab[i][j] = 0;
-	}
 
-        return (tab);
-}	
+		for (j = 0; j < width; j++)
+			tab[i][j] = 0;
+	}
+	return (tab);
+}
