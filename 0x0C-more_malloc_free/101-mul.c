@@ -3,97 +3,102 @@
 #include <stdlib.h>
 
 /**
- * is_digit - checks if a string contains a non-digit char
- * @s: string to be evaluated
+ * exit_x_error - print error message and exit of program
  *
- * Return: 0 if a non-digit is found, 1 otherwise
+ * Return: nothing.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int is_digit(char *s)
-{
-	int i = 0;
-
-	while (s[i])
-	{
-		if (s[i] < '0' || s[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-/**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * errors - handles errors for main
- */
-void errors(void)
+void exit_x_error(void)
 {
 	printf("Error\n");
 	exit(98);
 }
 
 /**
- * main - multiplies two positive numbers
- * @argc: number of arguments
- * @argv: array of arguments
+ * number_str_len - returns the length of string numbers or exit
  *
- * Return: always 0 (Success)
+ * @string: pointer to string.
+ * Return: length of string.
+ */
+int number_str_len(char *string)
+{
+	int len = 0;
+
+	while (string[len])
+	{
+		if (string[len] < '0' || '9' < string[len])
+			exit_x_error();
+		len++;
+	}
+	return (len);
+}
+
+/**
+ * print_number_string - print number of string
+ *
+ * @array_respuesta: pointer to string.
+ * @len: Length of the string
+ *
+ * Return: nothing.
+ */
+void print_number_string(char *array_respuesta, int len)
+{
+	char printed = 0;
+	int i;
+
+	for (i = 0; i < len; i++)
+		if (printed || ('0' < array_respuesta[i] && array_respuesta[i] <= '9'))
+		{
+			_putchar(array_respuesta[i]);
+			printed = 1;
+		}
+
+	if (!printed)
+		_putchar('0');
+	_putchar('\n');
+}
+
+/**
+ * main - enter point
+ *
+ * @argc: number of parameters passed to program
+ * @argv: array of parameters
+ *
+ * Return: 0 on succes
  */
 int main(int argc, char *argv[])
 {
-	char *s1, *s2;
-	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
+	int len1 = 0, len2 = 0, sum = 0, index1, index2, i;
+	char *num1, *num2, *array_respuesta;
 
-	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
-		errors();
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
-	len = len1 + len2 + 1;
-	result = malloc(sizeof(int) * len);
-	if (!result)
-		return (1);
-	for (i = 0; i <= len1 + len2; i++)
-		result[i] = 0;
-	for (len1 = len1 - 1; len1 >= 0; len1--)
+	if (argc != 3)
+		exit_x_error();
+
+	num1 = argv[1];
+	num2 = argv[2];
+	len1 = number_str_len(num1);
+	len2 = number_str_len(num2);
+
+	array_respuesta = malloc(sizeof(char) * (len1 + len2));
+	if (array_respuesta == NULL)
+		exit_x_error();
+
+	index1 = len1 - 1;
+	for (i = len1 + len2 - 1; i > 0; i--, index1--)
 	{
-		digit1 = s1[len1] - '0';
-		carry = 0;
-		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+		for (index2 = 0; index2 < len2; index2++)
 		{
-			digit2 = s2[len2] - '0';
-			carry += result[len1 + len2 + 1] + (digit1 * digit2);
-			result[len1 + len2 + 1] = carry % 10;
-			carry /= 10;
+			if (index2 < (len1 - index1) && (index1 + index2) >= 0)
+				sum += (num1[index1 + index2] - '0') * (num2[len2 - index2 - 1] - '0');
 		}
-		if (carry > 0)
-			result[len1 + len2 + 1] += carry;
+		array_respuesta[i] = (sum % 10) + '0';
+		sum /= 10;
 	}
-	for (i = 0; i < len - 1; i++)
-	{
-		if (result[i])
-			a = 1;
-		if (a)
-			_putchar(result[i] + '0');
-	}
-	if (!a)
-		_putchar('0');
-	_putchar('\n');
-	free(result);
+	if (sum != 0)
+		array_respuesta[i] = sum + '0';
+
+	print_number_string(array_respuesta, (len1 + len2));
+
+	free(array_respuesta);
 	return (0);
 }
